@@ -47,6 +47,7 @@
 }
 
 @mixin grid($columnas, $espaciado ) {
+
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
@@ -57,4 +58,34 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+}
+
+@mixin iconoBg($url){
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: 50% 2rem;
+    background-size: 10rem;
+}
+
+@mixin headingBorder ($colorTexto, $colorLinea){
+
+        font-size: 2.9rem;
+        display: inline-block;
+        margin-top: 5rem;
+        color: $colorTexto;
+    
+        @include tablet {
+            margin-top: 0;
+    
+        }
+    
+        &::after {
+            content: '';
+            background-color: $colorLinea;
+            height: 1rem;
+            width: calc(100% + 1rem);
+            display: block;
+            margin: -1rem 0 0 0 ;
+        }
+
 }

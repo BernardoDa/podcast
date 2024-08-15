@@ -15,8 +15,12 @@ body {
 }
 p {
     color: v.$negro;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2;
+
+    @include m.tablet {
+        font-size: 1.8rem;
+    }
 }
 .contenedor {
     width: 95%;
@@ -39,26 +43,7 @@ h1, h2, h3 {
 h1 {
     font-size: 4rem;
 }
-h2 {
-    font-size: 3.6rem;
-    display: inline-block;
-    margin-top: 5rem;
-    color: v.$secundario;
 
-    @include m.tablet {
-        margin-top: 0;
-
-    }
-
-    &::after {
-        content: '';
-        background-color: v.$primario;
-        height: 1rem;
-        width: 103%;
-        display: block;
-        margin: -.5rem 0 0 0 ;
-    }
-}
 h3 {
     font-size: 2.8rem;
     text-align: center;
